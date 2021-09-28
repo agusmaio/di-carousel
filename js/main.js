@@ -44,17 +44,13 @@
   };
 
   const init = async () => {
-    //primero tomamos las imagenes
     const images = await getImages();
     carouselWrapper.classList.remove('loading');
     carouseLoading.classList.remove('loading');
     imageAmount = images.length;
 
-    // primero seteamos el ancho del carousel a el ancho de su contenedor multiplicado
-    // por las imagenes que hay
     carouselSlider.style.width = carouselWidth * images.length + 'px';
 
-    // desp generamos el html por cada imagen
     images.forEach((img, index) => {
       renderImage(img);
       renderPagerItem(index);

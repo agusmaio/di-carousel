@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: sans-serif;
 }
@@ -20,9 +21,21 @@ body {
 }
 
 .carousel-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
   transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.carousel-image {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 
 .carousel-wrapper {
@@ -50,8 +63,14 @@ body {
 }
 
 .controls-arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 0 24px;
 }
@@ -62,6 +81,7 @@ body {
   height: 32px;
   border: none;
   cursor: pointer;
+  background: #fff;
   opacity: 0.4;
 }
 
@@ -73,7 +93,11 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding-bottom: 16px;
 }
@@ -84,6 +108,7 @@ body {
   border-radius: 100%;
   border: none;
   margin: 0 4px;
+  background: #fff;
   opacity: 0.5;
   cursor: pointer;
 }
@@ -96,13 +121,21 @@ body {
 .carousel-loading {
   z-index: 20;
   background: #333;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   color: #fff;
   font-size: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -119,7 +152,11 @@ body {
   color: #fff;
   padding: 24px;
   display: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -132,12 +169,10 @@ body {
   font-weight: bold;
 }
 
-.pwa-popup.active {
-  display: flex;
-}
-
 @media screen and (max-width: 680px) {
   .pwa-popup.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 }
