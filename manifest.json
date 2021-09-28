@@ -1,0 +1,23 @@
+{
+  "short_name": "DI Carousel",
+  "name": "Carousel Challenge Decimo Ink",
+  "icons": [
+    {
+      "src": "/css/images/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/css/images/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#222222",
+  "display": "standalone",
+  "theme_color": "#222222",
+  "description": "Javascript Carousel Website for Decimo Ink Challenge"
+}

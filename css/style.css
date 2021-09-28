@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+button {
+  font-family: inherit;
+}
+
+body {
+  background: #222;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.carousel-slider {
+  display: flex;
+  flex-wrap: wrap;
+  transition: transform 0.5s;
+}
+
+.carousel-wrapper {
+  margin-top: 120px;
+  position: relative;
+}
+
+.carousel-wrapper.loading {
+  height: 0;
+  padding-bottom: 50%;
+}
+
+.carousel-container {
+  overflow: hidden;
+}
+
+.carousel-loading,
+.controls-arrows,
+.controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.controls-arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.controls-arrows button {
+  border-radius: 100%;
+  width: 32px;
+  height: 32px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+.controls-arrows button:hover {
+  opacity: 1;
+}
+
+.controls-pager {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 16px;
+}
+
+.controls-pager button {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  border: none;
+  margin: 0 4px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.controls-pager button:hover,
+.controls-pager button.active {
+  opacity: 1;
+}
+
+.carousel-loading {
+  z-index: 20;
+  background: #333;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.carousel-loading.loading {
+  opacity: 1;
+  visibility: visible;
+}
+
+.pwa-popup {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #444;
+  color: #fff;
+  padding: 24px;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pwa-popup button {
+  color: #222;
+  background: #fff;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.pwa-popup.active {
+  display: flex;
+}
+
+@media screen and (max-width: 680px) {
+  .pwa-popup.active {
+    display: flex;
+  }
+}
+
+@media all and (display-mode: standalone) {
+  .pwa-popup,
+  .pwa-popup.active {
+    display: none !important;
+  }
+}
